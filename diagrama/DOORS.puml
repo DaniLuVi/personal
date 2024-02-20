@@ -2,10 +2,16 @@
 'https://plantuml.com/sequence-diagram
 
 autonumber
+RectanguloArriba -> Ventana: x,y para montar el rectángulo
+Ventana -> RECT: construye el rectángulo superior
+RECT -> RectanguloArriba
+RestoVentana -> Ventana: x,y para montar el rectángulo
+Ventana -> RECT: construye el resto de la ventana
+RECT -> RestoVentana
+CuadradoSalir -> RectanguloArriba:
+RectanguloArriba -> Ventana: x,y para montar el cuadrado
+Ventana -> RECT: construye el cuadrado
 
-RECT -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+
 @enduml

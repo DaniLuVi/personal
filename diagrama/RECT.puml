@@ -61,7 +61,6 @@ class EmoteMinimizar{
 }
 
 class EmoteGrande{
-- pic =
 }
 class CuadradoMinimizar{
 }
@@ -70,7 +69,7 @@ class CuadradoGrande{
 }
 
 class PressSalir{
-+ -
+- exit = True boolean
 }
 
 class PressMinimizar{
