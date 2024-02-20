@@ -1,0 +1,103 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class RECT{
+- px
+- py
+- dx
+- dy
++ onClick(x,y)
++ onMove(x,y)
++ onKeyPress(key)
++ Draw_border(x,y,dx,dy)
++ Draw_pic(x,y,dx,dy,pic)
++ Draw_text(x,y,texto)
++ Draw_fill(x,y,dx,dy,color)
+}
+
+class Ventana{
+- x
+- y
++ getX()
++ getY()
+}
+
+class RectanguloArriba{
+
+
+}
+
+class RestoVentana{
++toString()
+}
+
+class RectanguloTexto{
+}
+
+class TextoAMeter{
+- texto = "INTRODUCIR TEXTO" String
+}
+class RectanguloEnviar{
+}
+
+class TextoEnviar{
+- texto = "ENVIAR" String
+
+}
+
+class TextoTitulo{
+- texto = "TEXTO" String
+
+}
+class CuadradoSalir{
+}
+
+class EmoteSalir{
+- pic = "X" String
+}
+
+class EmoteMinimizar{
+- pic = "_" String
+}
+
+class EmoteGrande{
+- pic =
+}
+class CuadradoMinimizar{
+}
+
+class CuadradoGrande{
+}
+
+class PressSalir{
++ -
+}
+
+class PressMinimizar{
+
+}
+
+class PressGrande{
+
+}
+
+
+RECT  --> Ventana
+Ventana --> RectanguloArriba
+Ventana --> RestoVentana
+RectanguloArriba --> CuadradoSalir
+RectanguloArriba --> CuadradoMinimizar
+RectanguloArriba --> CuadradoGrande
+RestoVentana --> RectanguloTexto
+RestoVentana --> RectanguloEnviar
+RestoVentana --> TextoTitulo
+CuadradoSalir --> EmoteSalir
+CuadradoMinimizar --> EmoteMinimizar
+CuadradoGrande --> EmoteGrande
+EmoteSalir --> PressSalir
+EmoteMinimizar --> PressMinimizar
+EmoteGrande --> PressGrande
+RectanguloTexto --> TextoAMeter
+RectanguloEnviar --> TextoEnviar
+
+@enduml
